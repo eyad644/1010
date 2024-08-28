@@ -1,0 +1,44 @@
+# آلة حاسبة بسيطة
+
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    if y != 0:
+        return x / y
+    else:
+        return "خطأ: القسمة على الصفر غير مسموحة"
+
+print("اختر العملية:")
+print("1. الجمع")
+print("2. الطرح")
+print("3. الضرب")
+print("4. القسمة")
+
+# قراءة اختيار المستخدم
+choice = input("أدخل اختيارك (1/2/3/4): ")
+
+# قراءة الأرقام
+num1 = float(input("أدخل الرقم الأول: "))
+num2 = float(input("أدخل الرقم الثاني: "))
+
+if choice == '1':
+    print("النتيجة: ", add(num1, num2))
+
+elif choice == '2':
+    print("النتيجة: ", subtract(num1, num2))
+
+elif choice == '3':
+    print("النتيجة: ", multiply(num1, num2))
+
+elif choice == '4':
+    print("النتيجة: ", divide(num1, num2))
+
+else:
+    print("اختيار غير صحيح")
